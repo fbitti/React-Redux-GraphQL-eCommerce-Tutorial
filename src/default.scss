@@ -6,6 +6,12 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+html,
+body,
+#root,
+.App {
   height: 100%;
 }
 
@@ -30,4 +36,12 @@ a, a:hover {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.main {
+  width: 90%;
+  height: calc(100% - 6.5rem);
+  max-width: 1450px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
