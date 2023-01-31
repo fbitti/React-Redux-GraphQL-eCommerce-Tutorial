@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // layouts
+import HomepageLayout from './layouts/HomepageLayout';
 import MainLayout from './layouts/MainLayout';
 
 import Homepage from './pages/Homepage';
@@ -13,9 +14,9 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" render={() => 
-          <MainLayout>
+          <HomepageLayout>
             <Homepage />
-          </MainLayout>
+          </HomepageLayout>
         } />
         <Route path="/registration" render={() => 
           <MainLayout>

@@ -3,7 +3,7 @@ import Header from "./../components/Header";
 
 const MainLayout = props => {
   return (
-    <div className="fullHeight">
+    <div>
       <Header />
       <div className="main">
         {props.children}
