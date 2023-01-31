@@ -1,6 +1,9 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Switch, Route } from 'react-router-dom';
+
+// layouts
+import MainLayout from './layouts/MainLayout';
+
 import Homepage from './pages/Homepage';
 import Registration from './pages/Registration';
 import './default.scss';
@@ -8,13 +11,18 @@ import './default.scss';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className='main'>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/registration" element={<Registration />} />
-        </Routes>
-      </div>
+      <Switch>
+        <Route exact path="/" render={() => 
+          <MainLayout>
+            <Homepage />
+          </MainLayout>
+        } />
+        <Route path="/registration" render={() => 
+          <MainLayout>
+            <Registration />
+          </MainLayout>
+        } />
+      </Switch>
     </div>
   );
 }
